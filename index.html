@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Name - Official Website</title>
+    <!-- Add any necessary CSS files -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1><a href="#">Lady Amato</a></h1> <!-- Make the DJ name a link to home -->
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#bio">Bio</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb menu -->
+<div id="breadcrumb"></div>
+
+
+    <main>
+        <section id="home">
+            <div class="home-content">
+                <div class="home-image">
+                    <img src="bg.png" alt="Lady Amato Image"> <!-- Replace 'background.jpg' with your image path -->
+                </div>
+                <div class="home-text">
+                    <h2>Welcome to Lady Amato's World</h2>
+                    <p>Experience the rhythm of life with Lady Amato. Join us for unforgettable music experiences.</p>
+                    <div class="btn-container">
+                        <a href="#contact" class="btn">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="bio">
+            <h2>Biography</h2>
+            <p>
+                Lady Amato, born and raised in the vibrant city of Bloemfontein, 
+                South Africa, is a dynamic and highly acclaimed female DJ known for 
+                her electrifying performances and infectious beats. From an early age, music has been 
+                Lady Amato's passion, and she began her journey into the world of DJing with a fierce 
+                determination to make her mark on the industry.</p>
+                
+                <p>With a unique blend of Afro-house, deep house, and electronic sounds, 
+                Lady Amato has captivated audiences across the globe, from the pulsating nightlife of 
+                Cape Town to the buzzing clubs of Ibiza. Her seamless mixing skills and innate ability to 
+                read the crowd have earned her a reputation as one of the most sought-after DJs in the industry.</p>
+                
+                <p>Amato's rise to prominence has been nothing short of meteoric. 
+                She has graced the stages of prestigious festivals such as Ultra South Africa and Tomorrowland, 
+                sharing the spotlight with some of the biggest names in the electronic music scene. 
+                Her energetic sets are a testament to her passion for music and her unwavering dedication 
+                to delivering an unforgettable experience to her audience.</p>
+                
+                <p>Beyond her performances, Lady Amato is also a trailblazer and advocate for gender 
+                equality in the music industry. As a female DJ in a predominantly male-dominated field, 
+                she has faced her fair share of challenges but has never let anything stand in the way of her dreams. 
+                Through her music and her advocacy work, Lady Amato continues to inspire and empower aspiring female 
+                artists to pursue their passion for music and break down barriers.</p>
+                
+                <p>In addition to her thriving career as a DJ, Lady Amato is also a producer, with several 
+                chart-topping tracks under her belt. Her music resonates with listeners on a profound level, 
+                blending infectious rhythms with soulful melodies to create a truly immersive experience.</p>
+                
+                <p>she continues to push the boundaries of electronic music, Lady Amato remains committed 
+                to her craft and to spreading joy and positivity through her music. With her boundless 
+                energy and infectious enthusiasm, she is undoubtedly a force to be reckoned with in the world of music.</p>
+        </section>
+
+        <section id="music">
+            <h2>Music</h2>
+            <!-- Add music player or playlist here -->
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX5mILnBJLA26?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </section>
+
+        <section id="events">
+            <h2>Events</h2>
+            <div class="event-container">
+                <div class="event">
+                    <h3>Summer Beach Party</h3>
+                    <p>Date: July 15, 2024</p>
+                    <p>Location: Sandy Shores Beach, Cape Town</p>
+                    <p>Description: Join Lady Amato for a sun-soaked day of beats and fun at Sandy Shores Beach. Don't miss out on the ultimate summer beach party!</p>
+                </div>
+                <div class="event">
+                    <h3>Electric Nights Festival</h3>
+                    <p>Date: September 8, 2024</p>
+                    <p>Location: Electric Park, Johannesburg</p>
+                    <p>Description: Get ready to dance the night away at Electric Nights Festival with electrifying performances by top DJs, including Lady Amato!</p>
+                </div>
+                <div class="event">
+                    <h3>City Lights Rooftop Party</h3>
+                    <p>Date: October 20, 2024</p>
+                    <p>Location: Skyline Rooftop Bar, Durban</p>
+                    <p>Description: Experience the magic of the city lights from the rooftop while enjoying Lady Amato's signature beats at this exclusive rooftop party.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="image1.jpeg" alt="Image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="image2.jpeg" alt="Image 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="image3.jpeg" alt="Image 3">
+                </div>
+                <!-- Add more gallery items as needed -->
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contact-form" action="https://formspree.io/f/mleqwoog" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Lady Amato. All rights reserved.</p>
+    </footer>
+
+    <!-- Add any necessary JavaScript files -->
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,396 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f5e3e3; /* Light maroon */
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #800000; /* Dark maroon */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center; /* Center items vertically */
+}
+
+header h1 {
+    margin: 0;
+    line-height: 1;
+}
+
+header h1 a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem; /* Adjust size if needed */
+    transition: color 0.3s ease;
+}
+
+header h1 a:hover {
+    color: #ffd700; /* Yellow */
+}
+
+nav {
+    /* background-color: #a52a2a; Medium maroon */
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    flex-grow: 1; /* Allow nav to take remaining space */
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Yellow */
+}
+
+/* Main styles */
+main {
+    padding-top: 80px; /* Adjust for fixed header */
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #800000;
+}
+
+p {
+    font-size: 1.1rem;
+    padding: 0 35px 20px 35px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #800000; /* Dark maroon */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Media query for screens smaller than 768px (typical mobile devices) */
+@media (max-width: 768px) {
+    /* Adjust header styles */
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    /* Adjust main content padding */
+    main {
+        padding-top: 60px;
+    }
+
+    /* Adjust section styles */
+    section {
+        padding-top: 60px;
+    }
+
+    /* Adjust form styles */
+    #contact-form {
+        max-width: 100%;
+    }
+
+    /* Adjust gallery item width */
+    .gallery-item {
+        width: 100%;
+    }
+
+    /* Adjust home text padding */
+    .home-text {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Add any necessary CSS styles */
+
+#main-menu {
+    display: none;
+}
+
+.show-menu #main-menu {
+    display: block;
+}
+
+
+/* Event styles */
+#events {
+    padding: 105px 0;
+    text-align: center; /* Center align the content */
+}
+
+#events h2 {
+   
+    color: #800000; /* Dark maroon */
+    margin-bottom: 30px;
+}
+
+.event-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.event {
+    background-color: rgba(255, 255, 255, 0.9); /* White with transparency */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0 10px 20px; /* Margins on left and right */
+    width: calc(33.33% - 20px); /* Three cards per row with margins */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 0 auto; /* Allow cards to grow and shrink */
+}
+
+.event:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.event h3 {
+    color: #800000; /* Dark maroon */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.event p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.event p:last-child {
+    margin-bottom: 0;
+}
+
+/* Contact section styles */
+#contact {
+    padding: 105px 0;
+    text-align: center; /* Center align the content */
+}
+
+#contact h2 {
+    color: #800000; /* Dark maroon */
+    margin-bottom: 30px;
+}
+
+/* Form styles */
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f9f9f9; /* Light grey */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333; /* Dark grey */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: #800000; /* Dark maroon */
+}
+
+.form-group textarea {
+    height: 120px;
+}
+
+button[type="submit"] {
+    background-color: #800000; /* Dark maroon */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #a52a2a; /* Medium maroon */
+}
+
+/* Gallery section styles */
+#gallery {
+    padding: 105px 0;
+    text-align: center;
+}
+
+#gallery h2 {
+    color: #800000; /* Dark maroon */
+    margin-bottom: 30px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    margin: 0 10px 20px; /* Add margin between gallery items */
+    width: 300px; /* Set fixed width for gallery items */
+}
+
+.gallery-item img {
+    width: 100%; /* Ensure images fill their container */
+    height: 200px; /* Set fixed height for all images */
+    object-fit: cover; /* Ensure images cover their container */
+    border-radius: 10px; /* Add rounded corners to images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05); /* Scale up image on hover */
+}
+
+/* Music section styles */
+#music {
+    padding: 105px 0;
+    text-align: center;
+}
+
+#music h2 {
+    color: #800000; /* Dark maroon */
+    margin-bottom: 30px;
+}
+
+/* Biography section styles */
+#bio {
+    padding: 105px 0;
+    text-align: center;
+}
+
+#bio h2 {
+    color: #800000; /* Dark maroon */
+    margin-bottom: 30px;
+}
+
+/* Home section styles */
+#home {
+    padding: 105px 0;
+    text-align: center;
+    
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+}
+
+.home-image {
+    flex: 1;
+    text-align: center;
+}
+
+.home-image img {
+    width: 80%; /* Adjust the image width as needed */
+    border-radius: 10px; /* Add border radius for rounded corners */
+}
+
+.home-text {
+    flex: 1;
+    text-align: left;
+    padding-left: 50px; /* Adjust the left padding as needed */
+}
+
+.home-text h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #800000;
+}
+
+.home-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-align: center; /* Center-align paragraph text */
+}
+
+.btn-container {
+    text-align: center; /* Center-align button */
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #800000; /* Dark maroon */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #a52a2a; /* Medium maroon */
+}
+
+/* Add space between section headers and top of page */
+section {
+    padding-top: 80px; /* Adjust as needed */
+}
