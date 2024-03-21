@@ -1,50 +1,35 @@
-// Define breadcrumb items
-const breadcrumbs = [
-  { label: 'Home', link: '#' },
-  { label: 'Bio', link: '#bio' },
-  { label: 'Music', link: '#music' },
-  { label: 'Events', link: '#events' },
-  { label: 'Gallery', link: '#gallery' },
-  { label: 'Contact', link: '#contact' },
-];
+// Define function to handle breadcrumb click event
+function handleBreadcrumbClick() {
+  const bioLink = document.querySelector('#breadcrumb a[href="#bio"]');
+  const musicLink = document.querySelector('#breadcrumb a[href="#music"]');
+  const eventsLink = document.querySelector('#breadcrumb a[href="#events"]');
+  const galleryLink = document.querySelector('#breadcrumb a[href="#gallery"]');
+  const contactLink = document.querySelector('#breadcrumb a[href="#contact"]');
 
-// Function to generate breadcrumb menu
-function generateBreadcrumb() {
-  const breadcrumbDiv = document.getElementById('breadcrumb');
-  const breadcrumbList = document.createElement('ul');
+  // Add event listener for each specific breadcrumb link
+  bioLink.addEventListener('click', handleClick);
+  musicLink.addEventListener('click', handleClick);
+  eventsLink.addEventListener('click', handleClick);
+  galleryLink.addEventListener('click', handleClick);
+  contactLink.addEventListener('click', handleClick);
 
-  breadcrumbs.forEach((item, index) => {
-    const listItem = document.createElement('li');
-    const link = document.createElement('a');
-    link.textContent = item.label;
-    link.href = item.link;
-    listItem.appendChild(link);
+  // Function to handle click event
+  function handleClick(event) {
+    event.preventDefault();
+    const targetId = event.target.getAttribute('href').substring(1);
+    const targetSection = document.getElementById(targetId);
+    targetSection.scrollIntoView({ behavior: 'smooth' });
 
-    // Add click event listener to update content
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-      navigateToSection(index);
-    });
-
-    breadcrumbList.appendChild(listItem);
-  });
-
-  breadcrumbDiv.appendChild(breadcrumbList);
+    // Close the navbar on small screens after clicking on the specific breadcrumb link
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    if (window.innerWidth < 768 && navbarCollapse.classList.contains('show')) {
+      navbarCollapse.classList.remove('show');
+    }
+  }
 }
 
-// Function to navigate to a specific section based on breadcrumb index
-function navigateToSection(index) {
-  const sections = document.querySelectorAll('section');
-  sections[index].scrollIntoView({ behavior: 'smooth' });
-}
-
-// Call the function to generate the breadcrumb menu
-generateBreadcrumb();
-
-// Toggle display of main menu
-const mainMenu = document.getElementById('main-menu');
-const breadcrumbMenu = document.getElementById('breadcrumb');
-
-breadcrumbMenu.addEventListener('click', () => {
-  mainMenu.classList.toggle('show-menu');
-});
+// Call the functions on page load
+window.onload = function () {
+  generateBreadcrumb();
+  handleBreadcrumbClick();
+};
